@@ -1,0 +1,46 @@
+.hamburger-menu {
+  inline-size: 4rem;
+  block-size: 4rem;
+  position: fixed;
+  inset-block-start: 10%;
+  inset-inline-end: 5%;
+  z-index: 500;
+  @include flexLayout;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 0.5s;
+
+  &-line {
+    inline-size: 100%;
+    block-size: 0.4rem;
+    background-color: $color-primary;
+    transform-origin: right;
+    z-index: 500;
+    transition: all 0.5s 0.5s;
+  }
+}
+
+#check:checked {
+  & ~ .navbar-navigation .navbar-navigation-left {
+    inset-inline-start: 0;
+  }
+
+  & ~ .navbar-navigation .navbar-navigation-right {
+    inset-inline-end: 0;
+  }
+
+  & ~ .hamburger-menu {
+    transform: rotate(90deg);
+
+    .menu-line-1 {
+      transform: rotate(-40deg);
+    }
+    .menu-line-2 {
+      opacity: 0;
+    }
+    .menu-line-3 {
+      transform: rotate(40deg);
+    }
+  }
+}
