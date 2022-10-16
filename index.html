@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+    <script src="https://kit.fontawesome.com/0550be4d83.js" crossorigin="anonymous"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Josefin+Sans:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <title>Restaurant "Georgia"</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <input type="checkbox" name="check" id="check" class="checkbox" hidden>
+        <label for="check" class="hamburger-menu">
+            <span class="hamburger-menu-line menu-line-1"></span>
+            <span class="hamburger-menu-line menu-line-2"></span>
+            <span class="hamburger-menu-line menu-line-3"></span>
+        </label>
+        <div class="navbar-navigation">
+            <aside class="navbar-navigation-left">
+                <img class="left-img left-img-1" src="img/nav-img-1.jpeg" alt="nav image 1">
+                <img class="left-img left-img-2" src="img/nav-img-2.jpeg" alt="nav image 2">
+                <img class="left-img left-img-3" src="img/nav-img-3.jpeg" alt="nav image 3">
+            </aside>
+            <ul class="navbar-navigation-right nav-list">
+                <li class="nav-list-item">
+                    <a href="#" class="nav-list-link">Home</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="#" class="nav-list-link">About Us</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="#" class="nav-list-link">Gallery</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="#" class="nav-list-link">Reservation</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="#" class="nav-list-link">Services</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="#" class="nav-list-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+    <header class="header">
+        <section class="header__brand">
+
+            <a href="#" class="logo">
+                <span class="fas fa-utensils"> </span>
+            </a>
+            <hgroup>
+                <h1 class="main-name">Georgia</h1>
+                <p class="sub-name">Restaurant</p>
+            </hgroup>
+        </section>
+
+        <section class="header__banner">
+            <hgroup>
+                <h2 class="main-heading">Welcome</h2>
+                <p class="sub-heading">Try Great Georgia Dishes</p>
+            </hgroup>
+            <button class="main-btn">Reservation</button>
+        </section>
+    </header>
+    <main>
+        <section class="about" aria-label="About us section">
+            <picture class="about__start">
+                <source media="(min-width:400px )" srcset="img/about-us-img.webp">
+                <source media="(min-width: 400px)" srcset="img/about-us-img.png">
+                <img src="img/about-us-img.png" alt="">
+            </picture>
+            <article class="about__end">
+                <hgroup>
+                    <h2 class="main-heading">About us</h2>
+                    <h3 class="sub-heading">Introduce To Georgian Dishes</h3>
+                </hgroup>
+                <p class="stars">
+                    <span class="fas fa-star-of-life star"></span>
+                    <span class="fas fa-star-of-life star"></span>
+                    <span class="fas fa-star-of-life star"></span>
+                </p>
+                <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt sit illum
+                    omnis accusamus minus atque iusto. Fugit nesciunt laudantium praesentium ea error inventore qui,
+                    rem dolores, quasi unde vitae rerum blanditiis non soluta magni distinctio earum velit ut ab
+                    quaerat quis. Eligendi, quasi! Animi sit recusandae iusto non cumque neque?</p>
+                <p class="stars">
+                    <span class="fas fa-star-of-life star"></span>
+                    <span class="fas fa-star-of-life star"></span>
+                    <span class="fas fa-star-of-life star"></span>
+                </p>
+                <button class="main-btn">Read More</button>
+
+            </article>
+
+        </section>
+
+        <section class="gallery" aria-label="Dishes gallery">
+            <dl class="cards" itemscope>
+                <div class="card">
+                    <dt class="card__overlay-heading">Food title</dt>
+                    <dd class="card__overlay-paragraph">
+                        <p>
+                            Price:
+                            <data class="price" itemprop="currency" value="USD">$</data><data class="price"
+                                itemprop="price" value="30">30</data>
+                        </p>
+                        <button class="card__overlay-btn" type="button">Order Now</button>
+                    </dd>
+                    <dd>
+
+                        <img class="card__img" src="img/gallery-img-1.jpeg" alt="Dish 1">
+                    </dd>
+                </div>
+                <div class="card">
+                    <dt class="card__overlay-heading">Food title</dt>
+                    <dd class="card__overlay-paragraph">
+                        <p>
+                            Price:
+                            <data class="price" itemprop="currency" value="USD">$</data><data class="price"
+                                itemprop="price" value="30">30</data>
+                        </p>
+                        <button class="card__overlay-btn" type="button">Order Now</button>
+                    </dd>
+                    <dd>
+                        <img class="card__img" src="img/gallery-img-2.jpeg" alt="Dish 2">
+                    </dd>
+                </div>
+                <div class="card">
+                    <dt class="card__overlay-heading">Food title</dt>
+                    <dd class="card__overlay-paragraph">
+                        <p>
+                            Price:
+                            <data class="price" itemprop="currency" value="USD">$</data><data class="price"
+                                itemprop="price" value="30">30</data>
+                        </p>
+                        <button class="card__overlay-btn" type="button">Order Now</button>
+                    </dd>
+                    <dd>
+                        <img class="card__img" src="img/gallery-img-3.jpeg" alt="Dish 3">
+                    </dd>
+                </div>
+                <div class="card">
+                    <dt class="card__overlay-heading">Food title</dt>
+                    <dd class="card__overlay-paragraph">
+                        <p>
+                            Price:
+                            <data class="price" itemprop="currency" value="USD">$</data><data class="price"
+                                itemprop="price" value="30">30</data>
+                        </p>
+                        <button class="card__overlay-btn" type="button">Order Now</button>
+                    </dd>
+                    <dd>
+                        <img class="card__img" src="img/gallery-img-4.jpeg" alt="Dish 4">
+                    </dd>
+                </div>
+                <div class="card">
+                    <dt class="card__overlay-heading">Food title</dt>
+                    <dd class="card__overlay-paragraph">
+                        <p>
+                            Price:
+                            <data class="price" itemprop="currency" value="USD">$</data><data class="price"
+                                itemprop="price" value="30">30</data>
+                        </p>
+                        <button class="card__overlay-btn" type="button">Order Now</button>
+                    </dd>
+                    <dd>
+                        <img class="card__img" src="img/gallery-img-5.jpeg" alt="Dish 5">
+                    </dd>
+                </div>
+                <div class="card">
+                    <dt class="card__overlay-heading">Food title</dt>
+                    <dd class="card__overlay-paragraph">
+                        <p>
+                            Price:
+                            <data class="price" itemprop="currency" value="USD">$</data><data class="price"
+                                itemprop="price" value="30">30</data>
+                        </p>
+                        <button class="card__overlay-btn" type="button">Order Now</button>
+                    </dd>
+                    <dd>
+                        <img class="card__img" src="img/gallery-img-6.jpeg" alt="Dish 6">
+                    </dd>
+                </div>
+            </dl>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__header">
+
+            <a href="#" class="logo">
+                <span class="fas fa-utensils"> </span>
+            </a>
+            <hgroup>
+                <h2 class="main-name">Georgia</h2>
+                <p class="sub-name">Restaurant</p>
+            </hgroup>
+        </section>
+        <section class="footer__social-media" aria-label="Restaurant social media links">
+            <ul class="social-media">
+                <li class="social-media-item">
+                    <a href="#" class="social-media-link">
+                        <span class="fa fa-facebook-square"></span>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="#" class="social-media-link">
+                        <span class="fa fa-instagram"></span>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="#" class="social-media-link">
+                        <span class="fa fa-google-plus-square"></span>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="#" class="social-media-link">
+                        <span class="fa fa-youtube"></span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="footer__copyright" aria-label="Copyright statements">
+            <p class="footer__copyright-paragraph">&copy; Copyright. Restaurant "Georgia". All Rights Reserved.</p>
+        </section>
+    </footer>
+
+</body>
+
+</html>
