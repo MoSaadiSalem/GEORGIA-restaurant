@@ -1,0 +1,401 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #262626;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.navbar {
+  position: relative;
+  z-index: 200;
+}
+.navbar-navigation {
+  display: flex;
+}
+.navbar-navigation-left {
+  inline-size: 50vw;
+  block-size: 100vh;
+  background-color: #262626;
+  position: fixed;
+  inset-inline-start: -50vw;
+  transition: inset-inline-start 0.8s cubic-bezier(1, 0, 0, 1);
+}
+.navbar-navigation-left .left-img {
+  inline-size: 50%;
+  position: absolute;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
+  opacity: 0.7;
+  border-radius: 10px;
+}
+.navbar-navigation-left .left-img-1 {
+  inset-block-start: 15%;
+  inset-inline-start: 15%;
+}
+.navbar-navigation-left .left-img-2 {
+  inset-block-start: 35%;
+  inset-inline-start: 25%;
+}
+.navbar-navigation-left .left-img-3 {
+  inset-block-start: 55%;
+  inset-inline-start: 35%;
+}
+.navbar-navigation-right {
+  inline-size: 50vw;
+  block-size: 100vh;
+  background-color: #1f1d1d;
+  position: fixed;
+  inset-inline-end: -50vw;
+  transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+.navbar-navigation .nav-list {
+  list-style: none;
+}
+.navbar-navigation .nav-list-link {
+  font-family: "Dancing Script", cursive;
+  font-size: 5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: #bbb;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+.navbar-navigation .nav-list-link:hover {
+  color: #d3ab55;
+  letter-spacing: 4px;
+}
+
+.header {
+  position: relative;
+  inline-size: 100%;
+  block-size: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/bg.jpeg) center no-repeat;
+  background-size: cover;
+}
+.header__brand {
+  position: absolute;
+  inset-block-start: 15vh;
+  inset-inline-start: 50vw;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.header__banner {
+  position: absolute;
+  inset-block-start: 40vh;
+  inset-inline-start: 50vw;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.about {
+  block-size: 90vh;
+  display: flex;
+  align-items: center;
+  margin-block: 20rem;
+}
+.about__start {
+  inline-size: 40%;
+  position: relative;
+  inset-inline-start: -20rem;
+}
+.about__start img {
+  inline-size: 100%;
+  opacity: 0.7;
+}
+.about__end {
+  inline-size: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 10rem;
+}
+.about__end .stars {
+  margin-block: 3rem;
+}
+.about__end .star {
+  font-size: 1.5rem;
+  color: #d3ab55;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+.about__end .description {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: #bbb;
+  text-align: justify;
+}
+.about__end .description::first-letter {
+  -webkit-margin-start: 5rem;
+          margin-inline-start: 5rem;
+}
+
+.gallery .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.gallery .cards .card {
+  inline-size: 33.3333%;
+  block-size: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.gallery .cards .card__overlay-heading {
+  font-family: "Nunito", sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.gallery .cards .card__overlay-paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.gallery .cards .card__overlay-btn {
+  -webkit-margin-before: 3rem;
+          margin-block-start: 3rem;
+  inline-size: 15rem;
+  block-size: 4rem;
+  color: #d3ab55;
+  background-color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #d3ab55;
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+}
+.gallery .cards .card::before {
+  content: "";
+  position: absolute;
+  block-size: 100%;
+  inline-size: 0;
+  inset-inline-start: -100%;
+  transition: all 0.3s ease-out;
+}
+.gallery .cards .card:hover::before {
+  background-color: rgba(211, 171, 85, 0.6);
+  inline-size: 100%;
+  inset-inline-start: 0;
+}
+.gallery .cards .card > [class^=card__overlay] {
+  visibility: collapse;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+}
+.gallery .cards .card:hover > [class^=card__overlay] {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+.gallery .cards .card__img {
+  inline-size: 100%;
+  block-size: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: -1;
+}
+
+.footer {
+  padding-block: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  flex-direction: column;
+}
+.footer__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  gap: 1rem;
+}
+.footer .social-media {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.footer .social-media-link {
+  text-decoration: none;
+  font-size: 5rem;
+  color: #bbb;
+  transition: all 0.7s ease-out;
+}
+.footer .social-media-link:hover {
+  color: #d3ab55;
+}
+.footer__copyright-paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #bbb;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.logo {
+  font-size: 7rem;
+  color: #d3ab55;
+  inline-size: 11rem;
+  block-size: 11rem;
+  outline: 3px solid #d3ab55;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.main-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 5rem;
+  color: #bbb;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sub-name {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #bbb;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 10rem;
+  font-weight: 300;
+  color: #d3ab55;
+  -webkit-margin-after: 4rem;
+          margin-block-end: 4rem;
+}
+
+.sub-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 6rem;
+  font-weight: 300;
+  color: #bbb;
+  -webkit-margin-after: 6rem;
+          margin-block-end: 6rem;
+}
+
+.main-btn {
+  inline-size: 17rem;
+  block-size: 4.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border: 1px solid #d3ab55;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.main-btn:hover {
+  background-color: #d3ab55;
+  color: #262626;
+}
+
+.hamburger-menu {
+  inline-size: 4rem;
+  block-size: 4rem;
+  position: fixed;
+  inset-block-start: 10%;
+  inset-inline-end: 5%;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.hamburger-menu-line {
+  inline-size: 100%;
+  block-size: 0.4rem;
+  background-color: #d3ab55;
+  transform-origin: right;
+  z-index: 500;
+  transition: all 0.5s 0.5s;
+}
+
+#check:checked ~ .navbar-navigation .navbar-navigation-left {
+  inset-inline-start: 0;
+}
+#check:checked ~ .navbar-navigation .navbar-navigation-right {
+  inset-inline-end: 0;
+}
+#check:checked ~ .hamburger-menu {
+  transform: rotate(90deg);
+}
+#check:checked ~ .hamburger-menu .menu-line-1 {
+  transform: rotate(-40deg);
+}
+#check:checked ~ .hamburger-menu .menu-line-2 {
+  opacity: 0;
+}
+#check:checked ~ .hamburger-menu .menu-line-3 {
+  transform: rotate(40deg);
+}
