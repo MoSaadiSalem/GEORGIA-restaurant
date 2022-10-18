@@ -45,6 +45,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: $color-dark;
+  min-inline-size: 320px;
 }
 
 p,

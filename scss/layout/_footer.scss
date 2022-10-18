@@ -1,0 +1,34 @@
+.footer {
+  padding-block: $space-xl-4xl;
+  @include flexLayout($space-xl-4xl);
+  flex-direction: column;
+
+  &__header {
+    @include flexLayout;
+    gap: $space-xs-s;
+  }
+
+  .social-media {
+    list-style: none;
+    @include flexLayout($space-l-xl);
+
+    &-link {
+      text-decoration: none;
+      font-size: $step-7; // 5rem;
+      color: $color-secondary;
+      transition: all 0.7s ease-out;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  &__copyright-paragraph {
+    font-family: $font-josefinSans;
+    font-size: $step-2; // 1.8rem
+    color: $color-secondary;
+    @include textStyles(capitalize);
+    text-align: center;
+    padding-inline: $space-2xs-xs;
+  }
+}

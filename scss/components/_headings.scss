@@ -1,0 +1,32 @@
+.main-name {
+  font-family: $font-nunito;
+  font-size: $step-7; // 5rem -->
+  color: $color-secondary;
+  @include textStyles;
+}
+
+.sub-name {
+  font-family: $font-josefinSans;
+  font-size: $step-3;
+  color: $color-secondary;
+  text-align: center;
+  @include textStyles;
+}
+
+.main-heading {
+  font-family: $font-dancingScript;
+  font-size: $step-10; // 10rem
+  font-weight: 300;
+  text-align: center;
+  color: $color-primary;
+  margin-block-end: $step-6;
+}
+
+.sub-heading {
+  font-family: $font-josefinSans;
+  font-size: $step-8; // 6rem
+  font-weight: 300;
+  text-align: center;
+  color: $color-secondary;
+  // margin-block-end: 6rem --> 5rem;
+}

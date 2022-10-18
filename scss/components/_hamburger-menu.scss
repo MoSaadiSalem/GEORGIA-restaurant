@@ -1,6 +1,6 @@
 .hamburger-menu {
-  inline-size: 4rem;
-  block-size: 4rem;
+  inline-size: $space-xl-2xl; // 4rem;
+  block-size: $space-xl-2xl; // 4rem;
   position: fixed;
   inset-block-start: 10%;
   inset-inline-end: 5%;

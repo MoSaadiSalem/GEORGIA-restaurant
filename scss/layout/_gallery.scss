@@ -1,0 +1,98 @@
+.gallery {
+  .cards {
+    @include flexLayout;
+    flex-wrap: wrap;
+    // align-content: center;
+    color: $color-white;
+
+    .card {
+      min-inline-size: 33.3333%;
+      max-inline-size: 100%;
+      padding: 5%;
+      aspect-ratio: 1;
+
+      position: relative;
+      @include flexLayout;
+      flex-direction: column;
+      text-align: center;
+      color: $color-white;
+      overflow: hidden;
+
+      &__overlay-heading {
+        font-family: $font-nunito;
+        font-size: $font-overlay-heading; // 5rem;
+        @include textStyles(capitalize);
+      }
+
+      &__overlay-paragraph {
+        font-family: $font-josefinSans;
+        font-size: $font-overlay-paragraph; // 3rem;
+        @include textStyles(capitalize);
+      }
+
+      &__overlay-btn {
+        margin-block-start: $space-l-xl; // 3rem;
+        inline-size: $width-btn; //15rem;
+        block-size: $height-btn; // 4rem;
+        color: $color-primary;
+        background-color: $color-white;
+        font-family: $font-josefinSans;
+        font-size: $step-1;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 1px solid $color-primary;
+        border-radius: $space-l-xl; // 3rem;
+        outline: none;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+          font-weight: normal;
+          inline-size: $space-6xl-7xl;
+          block-size: $space-l-xl;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        block-size: 100%;
+        inline-size: 0;
+        inset-inline-start: -100%;
+
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover::before {
+        background-color: rgba($color-primary, 0.6);
+        inline-size: 100%;
+        inset-inline-start: 0;
+      }
+
+      & > [class^='card__overlay'] {
+        visibility: collapse;
+        // pointer-events: none;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover > [class^='card__overlay'] {
+        visibility: visible;
+        // pointer-events: visible;
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      &__img {
+        inline-size: 100%;
+        block-size: 100%;
+        object-fit: cover;
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        z-index: -1;
+      }
+    }
+  }
+}

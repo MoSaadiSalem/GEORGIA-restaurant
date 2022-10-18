@@ -1,0 +1,59 @@
+$font-size-br-default: 16px;
+$font-size-custom-default: 10px;
+$font-size-1rem: calc(
+  ($font-size-custom-default / $font-size-br-default) * 100%
+);
+
+$width-max: 1920px;
+$width-min: 320px;
+
+// https://utopia.fyi/
+// Fluid Font System
+// Min Viewport Type Scale:1.125
+// Max Viewport Type Scale:1.25
+$step--10: clamp(0.11rem, calc(0.35rem + -0.2vw), 0.31rem);
+$step--9: clamp(0.13rem, calc(0.39rem + -0.21vw), 0.35rem);
+$step--8: clamp(0.17rem, calc(0.43rem + -0.22vw), 0.39rem);
+$step--7: clamp(0.21rem, calc(0.48rem + -0.23vw), 0.44rem);
+$step--6: clamp(0.26rem, calc(0.54rem + -0.23vw), 0.49rem);
+$step--5: clamp(0.33rem, calc(0.6rem + -0.23vw), 0.56rem);
+$step--4: clamp(0.41rem, calc(0.67rem + -0.21vw), 0.62rem);
+$step--3: clamp(0.51rem, calc(0.74rem + -0.19vw), 0.7rem);
+$step--2: clamp(0.64rem, calc(0.82rem + -0.15vw), 0.79rem);
+$step--1: clamp(0.8rem, calc(0.91rem + -0.09vw), 0.89rem);
+$step-0: clamp(1rem, calc(1rem + 0vw), 1rem);
+$step-1: clamp(1.13rem, calc(1.1rem + 0.13vw), 1.25rem);
+$step-2: clamp(1.27rem, calc(1.21rem + 0.3vw), 1.56rem);
+$step-3: clamp(1.42rem, calc(1.32rem + 0.53vw), 1.95rem);
+$step-4: clamp(1.6rem, calc(1.43rem + 0.84vw), 2.44rem);
+$step-5: clamp(1.8rem, calc(1.55rem + 1.25vw), 3.05rem);
+$step-6: clamp(2.03rem, calc(1.67rem + 1.79vw), 3.82rem);
+$step-7: clamp(2.28rem, calc(1.78rem + 2.49vw), 4.77rem);
+$step-8: clamp(2.57rem, calc(1.89rem + 3.4vw), 5.96rem);
+$step-9: clamp(2.89rem, calc(1.97rem + 4.56vw), 7.45rem);
+$step-10: clamp(3.25rem, calc(2.03rem + 6.07vw), 9.31rem);
+$step-11: clamp(3.656rem, calc(2.11rem + 6.15vw), 11.638rem);
+
+$font-overlay-paragraph: clamp(1.5rem, calc(1rem + 1.25vw), 3.05rem);
+$font-overlay-heading: clamp(1.78rem, calc(1rem + 2.49vw), 4.77rem);
+
+html {
+  font-size: $font-size-1rem;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  // Help prevent overflow of long words/names/URLs
+  overflow-wrap: break-word;
+
+  // Optional, not supported for all languages
+  hyphens: auto;
+}

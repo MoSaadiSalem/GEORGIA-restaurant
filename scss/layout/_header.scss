@@ -1,0 +1,21 @@
+.header {
+  @include flexLayout(10vh);
+  flex-direction: column;
+  inline-size: 100%;
+  block-size: 100vh;
+  padding-block-start: 10vh;
+  padding-block-end: 10vh;
+  background: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.6)),
+    url(../img/bg.jpeg) center no-repeat;
+  background-size: cover;
+
+  &__brand {
+    @include flexLayout($space-m-l); // 2rem
+  }
+
+  &__banner {
+    @include flexLayout($space-xl-2xl); // 6rem
+    flex-direction: column;
+    text-align: center;
+  }
+}

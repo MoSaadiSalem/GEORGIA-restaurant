@@ -1,0 +1,11 @@
+.logo {
+  font-size: $step-9; // 7rem to
+  color: $color-primary;
+  inline-size: $step-11;
+  block-size: $step-11;
+  text-decoration: none;
+  outline: 3px solid $color-primary;
+  outline-offset: 0.2rem;
+  border-radius: 50%;
+  @include flexLayout;
+}
