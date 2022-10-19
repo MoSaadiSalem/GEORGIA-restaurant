@@ -6,7 +6,17 @@
   padding-block-start: 10vh;
   padding-block-end: 10vh;
   background: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.6)),
-    url(../img/bg.jpeg) center no-repeat;
+    url(../img/bg.webp);
+
+  //  **** not supported yet ****
+  // -----------------------------
+  // background-image: image-set(
+  //   '../img/bg.webp' type('image/webp'),
+  //   '../img/bg.jpg' type('image/jpeg')
+  // );
+
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 
   &__brand {

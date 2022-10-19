@@ -1,18 +1,14 @@
 .navbar {
-  position: relative;
   z-index: 200;
   &-navigation {
-    display: flex;
+    // display: flex;
+    position: relative;
     &-left {
-      inline-size: 50vw;
-      block-size: 100vh;
+      @include navbar;
       background-color: $color-dark;
-      position: fixed;
       inset-inline-start: -50vw;
-      transition: inset-inline-start 0.8s cubic-bezier(1, 0, 0, 1);
-      display: flex;
+      @include flexLayout;
       flex-direction: column;
-      justify-content: space-around;
       align-items: flex-start;
 
       @media (max-width: 800px) {
@@ -21,51 +17,37 @@
 
       .left-img {
         inline-size: 50%;
-        // position: absolute;
         position: relative;
         box-shadow: 0 15px 60px rgba($color-black, 0.4);
         opacity: 0.7;
         border-radius: 10px;
+        overflow: hidden;
 
-        @media (max-width: 960px) {
-          inline-size: 52.25%;
+        img {
+          inline-size: 100%;
         }
 
         &-1 {
           inset-block-start: 15%;
           inset-inline-start: 15%;
-
-          @media (max-width: 960px) {
-            inset-block-start: 20%;
-          }
         }
 
         &-2 {
           align-self: center;
-          //   inset-block-start: 35%;
-          //   inset-inline-start: 25%;
         }
 
         &-3 {
           align-self: flex-end;
           inset-block-end: 15%;
           inset-inline-end: 15%;
-
-          @media (max-width: 960px) {
-            inset-block-end: 20%;
-          }
         }
       }
     }
 
     &-right {
-      inline-size: 50vw;
-      block-size: 100vh;
-      flex: 0 1 50vw;
+      @include navbar;
       background-color: #1f1d1d;
-      position: fixed;
       inset-inline-end: -50vw;
-      transition: all 0.8s cubic-bezier(1, 0, 0, 1);
       @include flexLayout($space-m-l); // 2rem
       flex-direction: column;
 
@@ -74,22 +56,22 @@
         inset-inline-end: -100vw;
       }
     }
+  }
 
-    .nav-list {
-      list-style: none;
+  .nav-list {
+    list-style: none;
 
-      &-link {
-        font-family: $font-dancingScript;
-        font-size: $step-8; // 5rem
-        @include textStyles(capitalize);
-        color: $color-secondary;
-        text-decoration: none;
-        transition: all 0.5s ease-out;
+    &-link {
+      font-family: $font-dancingScript;
+      font-size: $step-8; // 5rem
+      @include textStyles(capitalize);
+      color: $color-secondary;
+      text-decoration: none;
+      transition: all 0.5s ease-out;
 
-        &:hover {
-          color: $color-primary;
-          letter-spacing: 4px;
-        }
+      &:hover {
+        color: $color-primary;
+        letter-spacing: 4px;
       }
     }
   }

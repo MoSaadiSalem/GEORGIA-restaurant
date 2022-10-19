@@ -30,16 +30,19 @@ $font-nunito: 'Nunito', sans-serif;
   text-align: center;
 }
 
+@mixin navbar {
+  inline-size: 50vw;
+  block-size: 100vh;
+  position: fixed;
+  transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-}
-
-html {
-  font-size: calc((10 / 16) * 100%);
 }
 
 body {

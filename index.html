@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
 
-    <script src="https://kit.fontawesome.com/0550be4d83.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/main.min.css">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Josefin+Sans:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&display=swap"
@@ -25,9 +28,21 @@
         </label>
         <div class="navbar-navigation">
             <aside class="navbar-navigation-left">
-                <img class="left-img left-img-1" src="img/nav-img-1.jpeg" alt="nav image 1">
-                <img class="left-img left-img-2" src="img/nav-img-2.jpeg" alt="nav image 2">
-                <img class="left-img left-img-3" src="img/nav-img-3.jpeg" alt="nav image 3">
+                <picture class="left-img left-img-1">
+                    <source media="(min-width:50px )" srcset="img/nav-img-1.webp">
+                    <source media="(min-width: 50px)" srcset="img/nav-img-1.png">
+                    <img src="img/nav-img-1.jpeg" alt="nav image 1">
+                </picture>
+                <picture class="left-img left-img-2">
+                    <source media="(min-width:50px )" srcset="img/nav-img-2.webp">
+                    <source media="(min-width:50px)" srcset="img/nav-img-2.png">
+                    <img src="img/nav-img-2.jpeg" alt="nav image 2">
+                </picture>
+                <picture class="left-img left-img-3">
+                    <source media="(min-width:50px )" srcset="img/nav-img-3.webp">
+                    <source media="(min-width:50px)" srcset="img/nav-img-3.png">
+                    <img src="img/nav-img-3.jpeg" alt="nav image 3">
+                </picture>
             </aside>
             <ul class="navbar-navigation-right nav-list">
                 <li class="nav-list-item">
@@ -57,7 +72,10 @@
         <section class="header__brand">
 
             <a href="#" class="logo">
-                <span class="fas fa-utensils"> </span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M384 64c-24.8 0-48 77.3-48 160 0 57 32 80 32 80v128c0 8.8 7.2 16 16 16s16-7.2 16-16V75c0-11-11-11-16-11zM288 64l10 104c0 4.4-3.6 8-8 8s-8-3.6-8-8l-6-104h-8l-6 104c0 4.4-3.6 8-8 8s-8-3.6-8-8l10-104h-8s-24 107.2-24 128 13.4 38.6 32 45.2V432c0 8.8 7.2 16 16 16s16-7.2 16-16V237.2c18.6-6.6 32-24.2 32-45.2S296 64 296 64h-8zM160 64c-26.5 0-48 64-48 128 0 20.8 13.4 38.6 32 45.2V432c0 8.8 7.2 16 16 16s16-7.2 16-16V237.2c18.6-6.6 32-24.2 32-45.2 0-64-21.5-128-48-128z" />
+                </svg>
             </a>
             <hgroup>
                 <h1 class="main-name">Georgia</h1>
@@ -76,8 +94,8 @@
     <main>
         <section class="about" aria-label="About us section">
             <picture class="about__start">
-                <source media="(min-width:400px )" srcset="img/about-us-img.webp">
-                <source media="(min-width: 400px)" srcset="img/about-us-img.png">
+                <source media="(min-width:100px )" srcset="img/about-us-img.webp">
+                <source media="(min-width: 100px)" srcset="img/about-us-img.png">
                 <img src="img/about-us-img.png" alt="">
             </picture>
             <article class="about__end">
@@ -118,8 +136,11 @@
                         <button class="card__overlay-btn" type="button">Order Now</button>
                     </dd>
                     <dd>
-
-                        <img class="card__img" src="img/gallery-img-1.jpeg" alt="Dish 1">
+                        <picture>
+                            <source media="(min-width:100px )" srcset="img/gallery-img-1.webp">
+                            <source media="(min-width:100px)" srcset="img/gallery-img-1.jpeg">
+                            <img class="card__img" src="img/gallery-img-1.jpeg" alt="Dish 1">
+                        </picture>
                     </dd>
                 </div>
                 <div class="card">
@@ -133,7 +154,11 @@
                         <button class="card__overlay-btn" type="button">Order Now</button>
                     </dd>
                     <dd>
-                        <img class="card__img" src="img/gallery-img-2.jpeg" alt="Dish 2">
+                        <picture>
+                            <source media="(min-width:100px )" srcset="img/gallery-img-2.webp">
+                            <source media="(min-width:100px)" srcset="img/gallery-img-2.jpeg">
+                            <img class="card__img" src="img/gallery-img-2.jpeg" alt="Dish 2">
+                        </picture>
                     </dd>
                 </div>
                 <div class="card">
@@ -147,7 +172,11 @@
                         <button class="card__overlay-btn" type="button">Order Now</button>
                     </dd>
                     <dd>
-                        <img class="card__img" src="img/gallery-img-3.jpeg" alt="Dish 3">
+                        <picture>
+                            <source media="(min-width:100px )" srcset="img/gallery-img-3.webp">
+                            <source media="(min-width:100px)" srcset="img/gallery-img-3.jpeg">
+                            <img class="card__img" src="img/gallery-img-3.jpeg" alt="Dish 3">
+                        </picture>
                     </dd>
                 </div>
                 <div class="card">
@@ -161,7 +190,11 @@
                         <button class="card__overlay-btn" type="button">Order Now</button>
                     </dd>
                     <dd>
-                        <img class="card__img" src="img/gallery-img-4.jpeg" alt="Dish 4">
+                        <picture>
+                            <source media="(min-width:100px )" srcset="img/gallery-img-4.webp">
+                            <source media="(min-width:100px)" srcset="img/gallery-img-4.jpeg">
+                            <img class="card__img" src="img/gallery-img-4.jpeg" alt="Dish 4">
+                        </picture>
                     </dd>
                 </div>
                 <div class="card">
@@ -175,7 +208,11 @@
                         <button class="card__overlay-btn" type="button">Order Now</button>
                     </dd>
                     <dd>
-                        <img class="card__img" src="img/gallery-img-5.jpeg" alt="Dish 5">
+                        <picture>
+                            <source media="(min-width:100px )" srcset="img/gallery-img-5.webp">
+                            <source media="(min-width:100px)" srcset="img/gallery-img-5.jpeg">
+                            <img class="card__img" src="img/gallery-img-5.jpeg" alt="Dish 5">
+                        </picture>
                     </dd>
                 </div>
                 <div class="card">
@@ -189,7 +226,11 @@
                         <button class="card__overlay-btn" type="button">Order Now</button>
                     </dd>
                     <dd>
-                        <img class="card__img" src="img/gallery-img-6.jpeg" alt="Dish 6">
+                        <picture>
+                            <source media="(min-width:320px )" srcset="img/gallery-img-6.webp">
+                            <source media="(min-width: 320px)" srcset="img/gallery-img-6.jpeg">
+                            <img class="card__img" src="img/gallery-img-6.jpeg" alt="Dish 6">
+                        </picture>
                     </dd>
                 </div>
             </dl>
@@ -199,7 +240,10 @@
         <section class="footer__header">
 
             <a href="#" class="logo">
-                <span class="fas fa-utensils"> </span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M384 64c-24.8 0-48 77.3-48 160 0 57 32 80 32 80v128c0 8.8 7.2 16 16 16s16-7.2 16-16V75c0-11-11-11-16-11zM288 64l10 104c0 4.4-3.6 8-8 8s-8-3.6-8-8l-6-104h-8l-6 104c0 4.4-3.6 8-8 8s-8-3.6-8-8l10-104h-8s-24 107.2-24 128 13.4 38.6 32 45.2V432c0 8.8 7.2 16 16 16s16-7.2 16-16V237.2c18.6-6.6 32-24.2 32-45.2S296 64 296 64h-8zM160 64c-26.5 0-48 64-48 128 0 20.8 13.4 38.6 32 45.2V432c0 8.8 7.2 16 16 16s16-7.2 16-16V237.2c18.6-6.6 32-24.2 32-45.2 0-64-21.5-128-48-128z" />
+                </svg>
             </a>
             <hgroup>
                 <h2 class="main-name">Georgia</h2>
@@ -210,22 +254,36 @@
             <ul class="social-media">
                 <li class="social-media-item">
                     <a href="#" class="social-media-link">
-                        <span class="fa fa-facebook-square"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z" />
+                        </svg>
                     </a>
                 </li>
                 <li class="social-media-item">
                     <a href="#" class="social-media-link">
-                        <span class="fa fa-instagram"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M336 96c21.2 0 41.3 8.4 56.5 23.5S416 154.8 416 176v160c0 21.2-8.4 41.3-23.5 56.5S357.2 416 336 416H176c-21.2 0-41.3-8.4-56.5-23.5S96 357.2 96 336V176c0-21.2 8.4-41.3 23.5-56.5S154.8 96 176 96h160m0-32H176c-61.6 0-112 50.4-112 112v160c0 61.6 50.4 112 112 112h160c61.6 0 112-50.4 112-112V176c0-61.6-50.4-112-112-112z" />
+                            <path
+                                d="M360 176c-13.3 0-24-10.7-24-24s10.7-24 24-24c13.2 0 24 10.7 24 24s-10.8 24-24 24zM256 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64m0-32c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96z" />
+                        </svg>
                     </a>
                 </li>
                 <li class="social-media-item">
                     <a href="#" class="social-media-link">
-                        <span class="fa fa-google-plus-square"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M318.2 230.9l-1.6-7H160V288h90.7c-9.4 45-48.4 63.6-84.1 63.6-26 0-50.2-7.8-68.3-25.3-18.6-18.1-28.9-43.1-28.9-70.4 0-27.1 9.8-51.8 27.6-69.6 17.7-17.7 42-25.4 68.7-25.4 30.5 0 49.9 13.8 58.1 21.1l48-47.7C258.3 122.6 221.5 93 164.1 93c-44.3 0-86.7 16.8-117.7 47.8C15.9 171.3 0 215.2 0 256s15 82.6 44.6 113.3C76.3 402 121.2 419 167.5 419c42.1 0 81.9-16.5 110.3-46.3 28-29.4 42.4-70.1 42.4-112.7-.1-18-1.9-28.7-2-29.1zM512 224h-57v-57h-41v57h-57v41h57v57h41v-57h57z" />
+                        </svg>
                     </a>
                 </li>
                 <li class="social-media-item">
                     <a href="#" class="social-media-link">
-                        <span class="fa fa-youtube"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M508.6 148.8c0-45-33.1-81.2-74-81.2C379.2 65 322.7 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149 1 184.6-.1 220.2 0 255.8c-.1 35.6 1 71.2 3.4 106.9 0 45 33.1 81.5 73.9 81.5 58.2 2.7 117.9 3.9 178.6 3.8 60.8.2 120.3-1 178.6-3.8 40.9 0 74-36.5 74-81.5 2.4-35.7 3.5-71.3 3.4-107 .2-35.6-.9-71.2-3.3-106.9zM207 353.9V157.4l145 98.2-145 98.3z" />
+                        </svg>
                     </a>
                 </li>
             </ul>

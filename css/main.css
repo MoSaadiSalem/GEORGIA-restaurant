@@ -6,10 +6,6 @@
   box-sizing: inherit;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
   box-sizing: border-box;
   background-color: #262626;
@@ -52,7 +48,7 @@ h4 {
 /* Custom pairs */
 .logo {
   font-size: clamp(2.89rem, 1.97rem + 4.56vw, 7.45rem);
-  color: #d3ab55;
+  fill: #d3ab55;
   inline-size: clamp(3.656rem, 2.11rem + 6.15vw, 11.638rem);
   block-size: clamp(3.656rem, 2.11rem + 6.15vw, 11.638rem);
   text-decoration: none;
@@ -165,22 +161,23 @@ h4 {
 }
 
 .navbar {
-  position: relative;
   z-index: 200;
 }
 .navbar-navigation {
-  display: flex;
+  position: relative;
 }
 .navbar-navigation-left {
   inline-size: 50vw;
   block-size: 100vh;
-  background-color: #262626;
   position: fixed;
+  transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+  background-color: #262626;
   inset-inline-start: -50vw;
-  transition: inset-inline-start 0.8s cubic-bezier(1, 0, 0, 1);
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
   flex-direction: column;
-  justify-content: space-around;
   align-items: flex-start;
 }
 @media (max-width: 800px) {
@@ -194,20 +191,14 @@ h4 {
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
   opacity: 0.7;
   border-radius: 10px;
+  overflow: hidden;
 }
-@media (max-width: 960px) {
-  .navbar-navigation-left .left-img {
-    inline-size: 52.25%;
-  }
+.navbar-navigation-left .left-img img {
+  inline-size: 100%;
 }
 .navbar-navigation-left .left-img-1 {
   inset-block-start: 15%;
   inset-inline-start: 15%;
-}
-@media (max-width: 960px) {
-  .navbar-navigation-left .left-img-1 {
-    inset-block-start: 20%;
-  }
 }
 .navbar-navigation-left .left-img-2 {
   align-self: center;
@@ -217,19 +208,13 @@ h4 {
   inset-block-end: 15%;
   inset-inline-end: 15%;
 }
-@media (max-width: 960px) {
-  .navbar-navigation-left .left-img-3 {
-    inset-block-end: 20%;
-  }
-}
 .navbar-navigation-right {
   inline-size: 50vw;
   block-size: 100vh;
-  flex: 0 1 50vw;
-  background-color: #1f1d1d;
   position: fixed;
-  inset-inline-end: -50vw;
   transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+  background-color: #1f1d1d;
+  inset-inline-end: -50vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,10 +227,10 @@ h4 {
     inset-inline-end: -100vw;
   }
 }
-.navbar-navigation .nav-list {
+.navbar .nav-list {
   list-style: none;
 }
-.navbar-navigation .nav-list-link {
+.navbar .nav-list-link {
   font-family: "Dancing Script", cursive;
   font-size: clamp(2.57rem, 1.89rem + 3.4vw, 5.96rem);
   font-weight: 300;
@@ -255,7 +240,7 @@ h4 {
   text-decoration: none;
   transition: all 0.5s ease-out;
 }
-.navbar-navigation .nav-list-link:hover {
+.navbar .nav-list-link:hover {
   color: #d3ab55;
   letter-spacing: 4px;
 }
@@ -272,7 +257,9 @@ h4 {
           padding-block-start: 10vh;
   -webkit-padding-after: 10vh;
           padding-block-end: 10vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/bg.jpeg) center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .header__brand {
@@ -314,7 +301,8 @@ h4 {
   position: relative;
   inline-size: 100%;
   inset-inline-start: -30%;
-  opacity: 0.7;
+  opacity: 0.6;
+  z-index: -1;
 }
 .about__end {
   flex: 0 1 60%;
@@ -472,13 +460,14 @@ h4 {
   gap: clamp(2rem, 1.8rem + 1vw, 3rem);
 }
 .footer .social-media-link {
+  display: inline-block;
   text-decoration: none;
-  font-size: clamp(2.28rem, 1.78rem + 2.49vw, 4.77rem);
-  color: #bbb;
+  inline-size: clamp(2rem, 1.4rem + 3vw, 5rem);
+  fill: #bbb;
   transition: all 0.7s ease-out;
 }
 .footer .social-media-link:hover {
-  color: #d3ab55;
+  fill: #d3ab55;
 }
 .footer__copyright-paragraph {
   font-family: "Josefin Sans", sans-serif;
