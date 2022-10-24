@@ -1,0 +1,13 @@
+@use '../base/' as b;
+
+.logo {
+  font-size: b.$step-9; // 7rem to
+  fill: b.$color-primary;
+  inline-size: b.$step-11;
+  block-size: b.$step-11;
+  text-decoration: none;
+  outline: 3px solid b.$color-primary;
+  outline-offset: 0.2rem;
+  border-radius: 50%;
+  @include b.flexLayout;
+}

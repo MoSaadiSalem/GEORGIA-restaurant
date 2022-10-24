@@ -1,11 +1,14 @@
+@use '../base/' as b;
+
 .hamburger-menu {
-  inline-size: $space-xl-2xl; // 4rem;
-  block-size: $space-xl-2xl; // 4rem;
+  z-index: 200;
+  inline-size: b.$space-xl-2xl; // 4rem;
+  block-size: b.$space-xl-2xl; // 4rem;
   position: fixed;
   inset-block-start: 10%;
   inset-inline-end: 5%;
   z-index: 500;
-  @include flexLayout;
+  @include b.flexLayout;
   flex-direction: column;
   justify-content: space-around;
   cursor: pointer;
@@ -14,7 +17,7 @@
   &-line {
     inline-size: 100%;
     block-size: 0.4rem;
-    background-color: $color-primary;
+    background-color: b.$color-primary;
     transform-origin: right;
     z-index: 500;
     transition: all 0.5s 0.5s;

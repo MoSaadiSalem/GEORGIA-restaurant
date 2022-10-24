@@ -1,9 +1,11 @@
+@use '../base/' as b;
+
 .gallery {
   .cards {
-    @include flexLayout;
+    @include b.flexLayout;
     flex-wrap: wrap;
     // align-content: center;
-    color: $color-white;
+    color: b.$color-white;
 
     .card {
       min-inline-size: 33.3333%;
@@ -12,44 +14,44 @@
       aspect-ratio: 1;
 
       position: relative;
-      @include flexLayout;
+      @include b.flexLayout;
       flex-direction: column;
       text-align: center;
-      color: $color-white;
+      color: b.$color-white;
       overflow: hidden;
 
       &__overlay-heading {
-        font-family: $font-nunito;
-        font-size: $font-overlay-heading; // 5rem;
-        @include textStyles(capitalize);
+        font-family: b.$font-nunito;
+        font-size: b.$font-overlay-heading; // 5rem;
+        @include b.textStyles(capitalize);
       }
 
       &__overlay-paragraph {
-        font-family: $font-josefinSans;
-        font-size: $font-overlay-paragraph; // 3rem;
-        @include textStyles(capitalize);
+        font-family: b.$font-josefinSans;
+        font-size: b.$font-overlay-paragraph; // 3rem;
+        @include b.textStyles(capitalize);
       }
 
       &__overlay-btn {
-        margin-block-start: $space-l-xl; // 3rem;
-        inline-size: $width-btn; //15rem;
-        block-size: $height-btn; // 4rem;
-        color: $color-primary;
-        background-color: $color-white;
-        font-family: $font-josefinSans;
-        font-size: $step-1;
+        margin-block-start: b.$space-l-xl; // 3rem;
+        inline-size: b.$width-btn; //15rem;
+        block-size: b.$height-btn; // 4rem;
+        color: b.$color-primary;
+        background-color: b.$color-white;
+        font-family: b.$font-josefinSans;
+        font-size: b.$step-1;
         font-weight: bold;
         text-transform: uppercase;
-        border: 1px solid $color-primary;
-        border-radius: $space-l-xl; // 3rem;
+        border: 1px solid b.$color-primary;
+        border-radius: b.$space-l-xl; // 3rem;
         outline: none;
         cursor: pointer;
 
         @media (max-width: 768px) {
           font-size: 1rem;
           font-weight: normal;
-          inline-size: $space-6xl-7xl;
-          block-size: $space-l-xl;
+          inline-size: b.$space-6xl-7xl;
+          block-size: b.$space-l-xl;
         }
       }
 
@@ -64,7 +66,7 @@
       }
 
       &:hover::before {
-        background-color: rgba($color-primary, 0.6);
+        background-color: rgba(b.$color-primary, 0.6);
         inline-size: 100%;
         inset-inline-start: 0;
       }

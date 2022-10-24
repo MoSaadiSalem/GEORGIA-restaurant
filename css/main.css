@@ -19,11 +19,11 @@ h2,
 h3,
 h4 {
   overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  hyphens: auto;
 }
 
+/* One-up pairs */
+/* Custom pairs */
 html {
   font-size: 62.5%;
 }
@@ -39,63 +39,7 @@ h2,
 h3,
 h4 {
   overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-}
-
-/* One-up pairs */
-/* Custom pairs */
-.logo {
-  font-size: clamp(2.89rem, 1.97rem + 4.56vw, 7.45rem);
-  fill: #d3ab55;
-  inline-size: clamp(3.656rem, 2.11rem + 6.15vw, 11.638rem);
-  block-size: clamp(3.656rem, 2.11rem + 6.15vw, 11.638rem);
-  text-decoration: none;
-  outline: 3px solid #d3ab55;
-  outline-offset: 0.2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-}
-
-.main-name {
-  font-family: "Nunito", sans-serif;
-  font-size: clamp(2.28rem, 1.78rem + 2.49vw, 4.77rem);
-  color: #bbb;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.sub-name {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: clamp(1.42rem, 1.32rem + 0.53vw, 1.95rem);
-  color: #bbb;
-  text-align: center;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.main-heading {
-  font-family: "Dancing Script", cursive;
-  font-size: clamp(3.25rem, 2.03rem + 6.07vw, 9.31rem);
-  font-weight: 300;
-  text-align: center;
-  color: #d3ab55;
-  -webkit-margin-after: clamp(2.03rem, 1.67rem + 1.79vw, 3.82rem);
-          margin-block-end: clamp(2.03rem, 1.67rem + 1.79vw, 3.82rem);
-}
-
-.sub-heading {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: clamp(2.57rem, 1.89rem + 3.4vw, 5.96rem);
-  font-weight: 300;
-  text-align: center;
-  color: #bbb;
+  hyphens: auto;
 }
 
 .main-btn {
@@ -117,6 +61,7 @@ h4 {
 }
 
 .hamburger-menu {
+  z-index: 200;
   inline-size: clamp(3rem, 2.8rem + 1vw, 4rem);
   block-size: clamp(3rem, 2.8rem + 1vw, 4rem);
   position: fixed;
@@ -160,13 +105,93 @@ h4 {
   transform: rotate(40deg);
 }
 
-.navbar {
-  z-index: 200;
+.main-name {
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(2.28rem, 1.78rem + 2.49vw, 4.77rem);
+  color: #bbb;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
+
+.sub-name {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(1.42rem, 1.32rem + 0.53vw, 1.95rem);
+  color: #bbb;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(3.25rem, 2.03rem + 6.07vw, 9.31rem);
+  font-weight: 300;
+  text-align: center;
+  color: #d3ab55;
+  margin-block-end: clamp(2.03rem, 1.67rem + 1.79vw, 3.82rem);
+}
+
+.sub-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(2.57rem, 1.89rem + 3.4vw, 5.96rem);
+  font-weight: 300;
+  text-align: center;
+  color: #bbb;
+}
+
+.logo {
+  font-size: clamp(2.89rem, 1.97rem + 4.56vw, 7.45rem);
+  fill: #d3ab55;
+  inline-size: clamp(3.656rem, 2.11rem + 6.15vw, 11.638rem);
+  block-size: clamp(3.656rem, 2.11rem + 6.15vw, 11.638rem);
+  text-decoration: none;
+  outline: 3px solid #d3ab55;
+  outline-offset: 0.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+  flex-direction: column;
+  inline-size: 100%;
+  block-size: 100vh;
+  padding-block-start: 10vh;
+  padding-block-end: 10vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../assets/img/bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+}
+.header__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(3rem, 2.8rem + 1vw, 4rem);
+  flex-direction: column;
+  text-align: center;
+}
+
 .navbar-navigation {
+  z-index: 200;
   position: relative;
 }
 .navbar-navigation-left {
+  z-index: inherit;
   inline-size: 50vw;
   block-size: 100vh;
   position: fixed;
@@ -209,6 +234,7 @@ h4 {
   inset-inline-end: 15%;
 }
 .navbar-navigation-right {
+  z-index: inherit;
   inline-size: 50vw;
   block-size: 100vh;
   position: fixed;
@@ -245,48 +271,14 @@ h4 {
   letter-spacing: 4px;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10vh;
-  flex-direction: column;
-  inline-size: 100%;
-  block-size: 100vh;
-  -webkit-padding-before: 10vh;
-          padding-block-start: 10vh;
-  -webkit-padding-after: 10vh;
-          padding-block-end: 10vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/bg.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.header__brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
-}
-.header__banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(3rem, 2.8rem + 1vw, 4rem);
-  flex-direction: column;
-  text-align: center;
-}
-
 .about {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0;
   justify-content: space-around;
-  -webkit-margin-before: clamp(3rem, 2rem + 5vw, 8rem);
-          margin-block-start: clamp(3rem, 2rem + 5vw, 8rem);
-  -webkit-margin-after: clamp(9rem, 8.8rem + 1vw, 10rem);
-          margin-block-end: clamp(9rem, 8.8rem + 1vw, 10rem);
+  margin-block-start: clamp(3rem, 2rem + 5vw, 8rem);
+  margin-block-end: clamp(9rem, 8.8rem + 1vw, 10rem);
 }
 .about__start {
   justify-self: flex-start;
@@ -311,8 +303,7 @@ h4 {
   justify-content: center;
   gap: clamp(3rem, 2.8rem + 1vw, 4rem);
   flex-direction: column;
-  -webkit-padding-end: 1rem;
-          padding-inline-end: 1rem;
+  padding-inline-end: 1rem;
 }
 @media (max-width: 800px) {
   .about__end {
@@ -337,8 +328,7 @@ h4 {
   color: #bbb;
 }
 .about__end .description::first-letter {
-  -webkit-margin-start: clamp(3rem, 2.8rem + 1vw, 4rem);
-          margin-inline-start: clamp(3rem, 2.8rem + 1vw, 4rem);
+  margin-inline-start: clamp(3rem, 2.8rem + 1vw, 4rem);
 }
 
 .gallery .cards {
@@ -379,8 +369,7 @@ h4 {
   text-transform: capitalize;
 }
 .gallery .cards .card__overlay-btn {
-  -webkit-margin-before: clamp(2rem, 1.8rem + 1vw, 3rem);
-          margin-block-start: clamp(2rem, 1.8rem + 1vw, 3rem);
+  margin-block-start: clamp(2rem, 1.8rem + 1vw, 3rem);
   inline-size: clamp(12rem, 11rem + 5vw, 17rem);
   block-size: clamp(3rem, 2.8rem + 1vw, 4rem);
   color: #d3ab55;
@@ -429,8 +418,7 @@ h4 {
 .gallery .cards .card__img {
   inline-size: 100%;
   block-size: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 0;

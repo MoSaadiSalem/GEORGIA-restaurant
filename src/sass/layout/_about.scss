@@ -1,8 +1,10 @@
+@use '../base/' as b;
+
 .about {
-  @include flexLayout;
+  @include b.flexLayout;
   justify-content: space-around;
-  margin-block-start: $space-xl-5xl;
-  margin-block-end: $space-6xl-7xl;
+  margin-block-start: b.$space-xl-5xl;
+  margin-block-end: b.$space-6xl-7xl;
 
   &__start {
     justify-self: flex-start;
@@ -22,32 +24,32 @@
 
   &__end {
     flex: 0 1 60%;
-    @include flexLayout($space-xl-2xl);
+    @include b.flexLayout(b.$space-xl-2xl);
     flex-direction: column;
     padding-inline-end: 1rem;
 
     @media (max-width: 800px) {
       flex: 0 1 100%;
-      padding-inline: $space-s-m;
+      padding-inline: b.$space-s-m;
     }
 
     .stars {
-      @include flexLayout($space-s-m);
+      @include b.flexLayout(b.$space-s-m);
     }
 
     .star {
-      font-size: $step-1; // 1.5rem
-      color: $color-primary;
+      font-size: b.$step-1; // 1.5rem
+      color: b.$color-primary;
     }
 
     .description {
-      font-family: $font-josefinSans;
-      font-size: $step-4; // 2.5rem
+      font-family: b.$font-josefinSans;
+      font-size: b.$step-4; // 2.5rem
       font-style: italic;
-      color: $color-secondary;
+      color: b.$color-secondary;
 
       &::first-letter {
-        margin-inline-start: $space-xl-2xl; // 5rem
+        margin-inline-start: b.$space-xl-2xl; // 5rem
       }
     }
   }

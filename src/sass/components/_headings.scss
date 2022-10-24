@@ -1,0 +1,34 @@
+@use '../base/' as b;
+
+.main-name {
+  font-family: b.$font-nunito;
+  font-size: b.$step-7; // 5rem -->
+  color: b.$color-secondary;
+  @include b.textStyles;
+}
+
+.sub-name {
+  font-family: b.$font-josefinSans;
+  font-size: b.$step-3;
+  color: b.$color-secondary;
+  text-align: center;
+  @include b.textStyles;
+}
+
+.main-heading {
+  font-family: b.$font-dancingScript;
+  font-size: b.$step-10; // 10rem
+  font-weight: 300;
+  text-align: center;
+  color: b.$color-primary;
+  margin-block-end: b.$step-6;
+}
+
+.sub-heading {
+  font-family: b.$font-josefinSans;
+  font-size: b.$step-8; // 6rem
+  font-weight: 300;
+  text-align: center;
+  color: b.$color-secondary;
+  // margin-block-end: 6rem --> 5rem;
+}

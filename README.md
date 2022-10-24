@@ -23,7 +23,7 @@ This is the 1st project of [SASS - The Complete SASS Course (CSS Preprocessor) -
 
 ### Screenshot
 
-![Georgia Restaurant Screenshot](img/screenshot/screenshot-Georgia_restaurant.webp)
+![Georgia Restaurant Screenshot](assets/img/screenshot/screenshot-Georgia_restaurant.webp)
 
 ### Links
 

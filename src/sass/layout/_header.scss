@@ -1,12 +1,17 @@
+@use '../base/' as b;
+
 .header {
-  @include flexLayout(10vh);
+  @include b.flexLayout(10vh);
   flex-direction: column;
   inline-size: 100%;
   block-size: 100vh;
   padding-block-start: 10vh;
   padding-block-end: 10vh;
-  background: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.6)),
-    url(../img/bg.webp);
+  background: linear-gradient(
+      rgba(b.$color-black, 0.8),
+      rgba(b.$color-black, 0.6)
+    ),
+    url(../assets/img/bg.webp);
 
   //  **** not supported yet ****
   // -----------------------------
@@ -20,11 +25,11 @@
   background-size: cover;
 
   &__brand {
-    @include flexLayout($space-m-l); // 2rem
+    @include b.flexLayout(b.$space-m-l); // 2rem
   }
 
   &__banner {
-    @include flexLayout($space-xl-2xl); // 6rem
+    @include b.flexLayout(b.$space-xl-2xl); // 6rem
     flex-direction: column;
     text-align: center;
   }

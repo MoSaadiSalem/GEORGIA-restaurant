@@ -1,0 +1,37 @@
+@use '../base/' as b;
+
+.footer {
+  padding-block: b.$space-xl-4xl;
+  @include b.flexLayout(b.$space-xl-4xl);
+  flex-direction: column;
+
+  &__header {
+    @include b.flexLayout;
+    gap: b.$space-xs-s;
+  }
+
+  .social-media {
+    list-style: none;
+    @include b.flexLayout(b.$space-l-xl);
+
+    &-link {
+      display: inline-block;
+      text-decoration: none;
+      inline-size: b.$space-l-3xl; // 5rem;
+      fill: b.$color-secondary;
+      transition: all 0.7s ease-out;
+
+      &:hover {
+        fill: b.$color-primary;
+      }
+    }
+  }
+  &__copyright-paragraph {
+    font-family: b.$font-josefinSans;
+    font-size: b.$step-2; // 1.8rem
+    color: b.$color-secondary;
+    @include b.textStyles(capitalize);
+    text-align: center;
+    padding-inline: b.$space-2xs-xs;
+  }
+}

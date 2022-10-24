@@ -1,0 +1,20 @@
+@use '../base/' as b;
+
+.main-btn {
+  font-size: b.$step-2;
+  inline-size: b.$width-btn;
+  block-size: b.$height-btn;
+  font-family: b.$font-josefinSans;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border: 1px solid b.$color-primary;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &:hover {
+    background-color: b.$color-primary;
+    color: b.$color-dark;
+  }
+}
