@@ -11,7 +11,7 @@
       min-inline-size: 33.3333%;
       max-inline-size: 100%;
       padding: 5%;
-      aspect-ratio: 1;
+      object-fit: cover;
 
       position: relative;
       @include b.flexLayout;
